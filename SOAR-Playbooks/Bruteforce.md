@@ -652,6 +652,7 @@ The project successfully demonstrates an incident-driven SOAR workflow from brut
 
 The final capability is:
 
+```
 DETECT
    ↓
 EXTRACT
@@ -668,6 +669,9 @@ DOCUMENT
    ↓
 NOTIFY
 
+```
+
+
 The implementation also demonstrates the ability to troubleshoot a real external API failure and improve the architecture based on the observed failure.
 
 
@@ -678,9 +682,11 @@ This brute-force SOAR workflow is considered complete for the current stage.
 
 The next attack simulations will demonstrate:
 
+```
 Stage 4 — Containment
         ↓
 Stage 5 — Incident Management
+```
 
 These will be implemented using different attack scenarios so that the portfolio demonstrates multiple SOC response strategies rather than one oversized playbook.
 
