@@ -59,6 +59,8 @@ Evidence:
 
 
 # 03 — SOAR Architecture
+
+```
 Brute-Force Activity
         ↓
 Microsoft Sentinel Incident
@@ -93,7 +95,7 @@ Condition 1 — Private IP?
    Log + Comment Log + Comment
          ↓
    SOC Notification
-
+```
 
 ### Architectural Decision
 
@@ -238,12 +240,17 @@ Before calling VirusTotal, the workflow determines whether the IP is a private/i
 
 The condition checks:
 
+```
 10.0.0.0/8
 
 172.16.0.0/12
 
 192.168.0.0/16
-Decision
+```
+
+### Decision
+
+```
 Private IP?
      │
      ├── TRUE
@@ -255,18 +262,19 @@ Private IP?
          Public IP
            ↓
       VirusTotal
+```
 
 This prevents internal addresses from being unnecessarily submitted to an external threat-intelligence service.
 
 Example private IP observed during testing:
 
-
+```
 192.168.138.1
 
 Example public IP:
 
 45.76.249.19
-
+```
 
 
 # 11 — VirusTotal IP Enrichment
@@ -504,7 +512,9 @@ One successful run completed in approximately:
 
 The successful execution processed:
 
+```
 45.76.249.19
+```
 
 and created an incident comment containing the VirusTotal enrichment.
 
