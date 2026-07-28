@@ -581,53 +581,7 @@ These will be implemented in separate playbooks for other simulated attacks.
 This keeps the automation modular and attack-specific.
 
 
-# 22 — Security Engineering Principles Demonstrated
-
-This project demonstrates:
-
-Detection Engineering
-
-Brute-force activity was converted into a security incident.
-
-SOAR
-
-The incident automatically triggered a Logic App.
-
-Threat Intelligence
-
-Public IPs were enriched through VirusTotal.
-
-Entity Filtering
-
-Private addresses were excluded before external enrichment.
-
-Risk-Based Automation
-
-The workflow uses:
-
-malicious > 0 OR suspicious > 0
-Centralized Evidence
-
-Enrichment was stored in:
-
-VTIPReport_CL
-Incident Documentation
-
-The Sentinel incident was automatically updated.
-
-SOC Notification
-
-Risk-detected activity generates an email notification.
-
-Troubleshooting
-
-HTTP 429 quota failures were investigated and mitigated.
-
-Reliability
-
-Sequential execution was introduced to reduce API pressure.
-
-# 23 — Lessons Learned
+# 20 — Lessons Learned
 
 The most important lesson from this project was:
 
