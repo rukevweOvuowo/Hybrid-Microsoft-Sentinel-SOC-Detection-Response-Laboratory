@@ -372,6 +372,7 @@ the workflow treats the IP as requiring attention.
 
 ### Decision
 
+```
 VirusTotal
      ↓
 Malicious > 0
@@ -385,6 +386,7 @@ Suspicious > 0?
      └── FALSE
            ↓
        No detection
+```
 
 This is more defensible than treating a generic reputation score as the sole risk indicator.
 
