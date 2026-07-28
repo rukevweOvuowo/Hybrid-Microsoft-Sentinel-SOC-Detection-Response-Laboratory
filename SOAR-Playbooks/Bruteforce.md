@@ -177,6 +177,7 @@ The resulting alert was associated with a Microsoft Sentinel incident.
 
 This created the trigger for the SOAR workflow.
 
+```
 Brute-Force Activity
         ↓
 Detection Rule
@@ -186,6 +187,7 @@ Microsoft Sentinel
 Incident
         ↓
 Logic App / SOAR
+```
 
 This demonstrates an incident-driven automation model, rather than a manually executed response script.
 
@@ -319,6 +321,7 @@ The workflow was therefore reviewed for unnecessary API calls.
 
 The following controls were introduced:
 
+```
 Private IP filtering
         ↓
 Only public IPs go to VirusTotal
@@ -330,6 +333,7 @@ Concurrency limited to 1
 VirusTotal
         ↓
 Only one lookup processed at a time
+```
 
 The workflow was subsequently rerun when the API quota became available.
 
@@ -450,6 +454,7 @@ suspicious > 0
 
 The purpose is to make sure a potentially malicious or suspicious IP generates an explicit SOC notification rather than remaining visible only inside the playbook execution history.
 
+```
 Notification flow
 VirusTotal
      ↓
@@ -460,6 +465,7 @@ Malicious OR Suspicious
 Incident Comment
      ↓
 SOC Email
+```
 
 The email contains the information required by a Tier-1 analyst to begin triage.
 
@@ -472,6 +478,7 @@ After the troubleshooting and workflow improvements, the automation successfully
 
 A successful run demonstrated:
 
+```
 Microsoft Sentinel Incident
         ↓
 Entities - Get IPs
@@ -487,10 +494,10 @@ Condition 2
 Send Data
         ↓
 Add Comment to Incident
+```
+
 
 One successful run completed in approximately:
-
-
 2.94 seconds
 
 The successful execution processed:
@@ -634,6 +641,7 @@ Instead of assuming that the detection was broken, the workflow was investigated
 
 The final solution introduced:
 
+```
 Private IP Filtering
         +
 Sequential Processing
@@ -645,6 +653,9 @@ Persistent Logging
 Incident Documentation
         +
 SOC Notification
+
+```
+
 
 This made the automation more controlled and operationally useful.
 
